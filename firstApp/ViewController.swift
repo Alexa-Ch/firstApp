@@ -10,14 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var message: UILabel!
+    
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() { //
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func clckMeTapped(_ sender: Any) {
+        message.text = textField.text! // nil никогда не возвращает, поэтому !
     }
 
 
